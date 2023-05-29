@@ -1,0 +1,15 @@
+The Steps that are involved in the JDBC(Java Database Connectivity) are as follows :
+    (i) import the sql package
+        import java.sql.*;
+    (ii) Load the Driver
+        // String driver = "com.mysql.jdbc.Driver"; // This is Deprecated
+        String driver = "com.mysql.cj.jdbc.Driver; // use this instead of above Statement
+        Class.forName(driver);
+    (iii) Establish the Connection
+        Conection con = "jdbc:mysql://localhost:3306/database_name";
+    (iv) Create the Statement
+        Statement st = DriverManager.getConnection();
+            --> prepare and execute the query here only
+            String sql = ""; //CREATE, UPDATE, DELETE, FETCH
+            st.execute(sql);
+    (v) Get ResultSet
